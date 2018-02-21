@@ -14,11 +14,11 @@ function getStuff() {
         for (var i = 0; i < results.length; i++) {
             var tempDiv = $("<div>");
             var label = $("<p>");
-            label.text(results[i].rating);
+            label.text("Rating: "+results[i].rating);
             var topicImage = $("<img>");
             topicImage.attr({ "src": results[i].images.fixed_height_still.url , "data-animate": results[i].images.fixed_height.url, "data-still": results[i].images.fixed_height_still.url, "data-state": "still" });
             topicImage.addClass("gif");
-            tempDiv.append(label, topicImage);
+            tempDiv.append(topicImage,label);
             $("#gif-area").prepend(tempDiv);
         }
     })
