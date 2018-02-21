@@ -9,7 +9,6 @@ function getStuff() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
         var results = response.data;
         for (var i = 0; i < results.length; i++) {
             var tempDiv = $("<div>");
